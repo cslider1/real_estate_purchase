@@ -1,8 +1,22 @@
 // Using array-of-objects js as guide
 
-document.getElementById('datePicker').value = new Date().toDateInputValue();
+document.addEventListener("DOMContentLoaded", function(){
+    let date_field = document.getElementById("date");
+    date_field.value = new Date();
 
-document.querySelector('body').innerHTML = html;
+    // let now = document.getElementById("date"); 
+    // now.dateFormat("longTime");
+    
+    // var d = new Date();
+    // document.getElementById("datePicker").innerHTML = d.toDateString();
+   
+console.log(date_field, "date help")
+
+
+});  // native browser event and callback
+
+
+
 
 // // 1. Create an array to hold quiz questions and answers
 // const questions = [
