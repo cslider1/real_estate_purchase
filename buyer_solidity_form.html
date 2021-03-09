@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Real Estate Purchase Contract</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/re_style.css">
+        <script src="js/re.js"></script>
+
+    </head>
+    <body>
+
+      <header>
+        <h3>Property Token Sale Contract - Buyer's page</h3>
+
+      </header>
+      
+      <div class="flex-container">
+
+        <!-- Get datePicker from seller_solidity_form.html -->
+        <div class="flex-container" style="flex-shrink: initial;">
+          <label>Purchase Date: </label><input id="datePicker" name="date" placeholder="read-only date from seller init" readonly>
+            
+          
+          <br>
+          <br>
+          This is the <strong> official purchase date</strong> and will be used to benchmark both the seller's and buyer's obligations toward the token transfer date.
+          <br>
+          <br>
+        
+        </div>
+
+        <div class="flex-container">
+          <fieldset>
+          
+            <legend><span class="number">1.</span> Buyer Transaction Information</legend>
+            
+            <label for="fname">Buyer's First Name:</label>
+            <input class="heighttext" type="text" id="fname" name="user_first_name"> 
+
+            <label for="lname">Buyer's Last Name:</label>
+            <input class="heighttext" type="text" id="lname" name="user_last_name"><br>
+            <br>
+            
+            <label for="wallet">Buyer Wallet Address:</label>
+            <input class="input-long" type="text" id="wallet" name="user_wallet" placeholder="  0x1a2b3c4d5e6f7g8h9i0j1a2b3c4d5e6f7g8h9i0j">
+            
+            <label for="ssn">Buyer's SSN:</label>    <!--  TODO: add mask -->
+            <input class="heighttext" type="text" id="ssn" name="user_lssn"><br>
+            <br>
+
+            <label for="purchasePrice">Purchase Price: $</label>
+            <input class="heighttext" type="number" id="purchasePrice" name="purchasePrice" placeholder=" read-only from seller input" readonly>
+
+            <label for="deposit"> Deposit Amount: $</label>
+            <input class="heighttext" type="number" id="deposit" name="user_deposit" placeholder=" read-only from seller input" readonly></input>
+            
+            <!-- <label>Age:</label>
+            <input type="radio" id ="under_13" value="under_13" name="user_age"><label for="under_13" class="light">Under 13</label><br>
+            <input type="radio" id ="over_13" value="over_13" name="user_age"><label for="over_13" class="light">13 or older</label> -->
+            
+          </fieldset>
+        </div>
+        <br>
+        <br>
+        
+        <div>
+          <fieldset>
+            
+            <legend><span class="number">2.</span> Property Profile</legend>    
+            
+            <label for="prop_id">Token ID:</label>
+            <input class="heighttext" type="text" id="prop_id" name="user_prop_id placeholder=" read-only from seller input""></input>
+
+            <label for="address">Property Address:</label>
+            <input class="input-long" type="text" id="address" name="propertyAddress" placeholder=" read-only from seller input">
+            <br>
+            <br>
+            <label for="city">&nbsp;&nbsp;City:</label>
+            <input class="heighttext" type="text" id="city" name="propertyCity" placeholder=" read-only from seller input">
+
+            <label for="state">&nbsp;&nbsp;State:</label>
+            <input class="heighttext" type="text" id="city" name="propertyState" placeholder=" read-only from seller input">
+
+            <label for="zip">&nbsp;&nbsp;Zip Code:</label>
+            <input class="input-short" type="text" id="zip" maxlength="5" name="propertyZip" for="zip" placeholder=" read-only"></label>
+            <br>
+            <br>
+            
+            <label for="type">Property type:</label>
+            <select class="select" id="type" name="property_type">
+                <option class="option" value="single_family_home">Single family home</option>
+                <option class="option" value="condominium">Condominium</option>
+                <option class="option" value="multi_family">Multi-family home(duplex, triplex)</option>
+                <option class="option" value="other">Other</option>
+            </select>
+
+            <label for="other">&nbsp;&nbsp;If other is selected, fill in property type: </label>
+            <input class="input-long" type="text" id="other" name="user_other"></input><br>
+            <br>
+            
+            </fieldset>
+         </div>
+         <br>  
+         <br>
+          
+         <div>
+          <fieldset>
+              
+              <legend><span class="number">3.</span> Appraisal / Inspection Profile</legend> 
+
+              <input type="checkbox" id ="appraisal" value="appraisal" name="user_appraise"><label for="appraisal">  Appraisal Ordered</label><br>
+              <input type="checkbox" id ="appraisal" value="appraisal" name="user_appraise"><label for="appraisal">  Appraisal Waived</label><br>
+             <label>------------------------------</label> &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="appraisal" value="appraisal" name="user_appraise"><label for="appraisal">  Appraisal and Inspection Approved</label><br>
+             <input type="checkbox" id ="appraisal" value="appraisal" name="user_appraise"><label for="appraisal">  Appraisal Waived</label><br>
+              <input type="checkbox" id ="appraisal" value="appraisal" name="user_appraise"><label for="appraisal">  Inspection Ordered</label><br>
+              <input type="checkbox" id ="appraisal" value="appraisal" name="user_appraise"><label for="appraisal">  Inspection Waived</label><br>
+          
+              <p><em>[Add conditional statements to trigger what happens after click Submit.]</em></p>
+              <br>
+              <!-- Submit formaction telling where the input information will go. -->
+              <!-- Submit formenctype telling what format data will be sent in -->
+              <button class="button2" type="submit" formaction="/index_2.html" formenctype="multipart/form-data"
+              value="Submit as Multipart/form-data">Submit</button>  
+              
+              <!--Add fine print / disclosure information here?  -->
+          </fieldset>
+        </div>
+        <br>
+        <br>
+
+        <div>
+          <fieldset>
+              <input type="checkbox" id ="submit" value="submit" name="user_submit"><label for="confirm" class="light"> I certify that the information on this page 
+                  is true and complete and that I am lawfully authorized to execute this token transfer contract. By clicking Submit, I understand that the contract will be executed and will proceed toward a final token transfer when all conditions have been met.</label><br>
+                  <br>
+              <!-- Submit formaction telling where the input information will go. -->
+              <!-- Submit formenctype telling what format data will be sent in -->
+              <button class="button2" type="submit" formaction="/index_2.html" formenctype="multipart/form-data"
+              value="Submit as Multipart/form-data">Initiate Token Transfer</button>  
+              
+              <!--Add fine print / disclosure information here?  -->
+          </fieldset>
+        </div>  
+      
+    </body>
+</html>

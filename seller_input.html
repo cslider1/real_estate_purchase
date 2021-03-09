@@ -3,128 +3,164 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Real Estate Purchase Contract</title>
+        <title>Real Estate Property Transfer Contract</title>
         <link rel="stylesheet" href="css/normalize.css">
         <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="css/style.css">
-        <script src="js/real-estate.js"></script>
+        <link rel="stylesheet" href="css/re_style.css">
+        <script src="js/re.js"></script>
+        <script src=”./node_modules/web3/dist/web3.min.js”></script>
+
 
     </head>
     <body>
 
-      <h3>Property Token Sale Contract (seller's page)</h3>
+    <header>
+        <h3>Property Token Sale Contract - Seller's page</h3>
 
-      <form action="/purchase.sol" method="post">
-        
-        <br>
-        <label>Today's Date is: </label><input type="date" id="date" name="date" readonly>
-          
-        
-        <br>
-        <br>
-        This is the <strong> official purchase date</strong> and will be used to benchmark both the seller's and buyer's obligations toward the closing/property transfer date.
-        <br>
-        <br>  
-        <br> 
-        <fieldset class="field">
-          <legend>TOP 5 PIZZA TOPPINGS</legend>
-              <ol>
-                  <li>Cheese</li>
-                  <li>Pepperoni</li>
-                  <li>Basil</li>
-                  <li>Oregano</li>
-                  <li>Red Pepper Flakes</li>
-              </ol>
-
-        </fieldset>  
-        <br>
-        <br>
-            
-        <fieldset>
-        
-          <legend><span class="number">1.</span> Seller Transaction Information</legend>
-          
-          <label for="fname">Seller First Name:</label>
-          <input type="text" id="fname" name="user_first_name"> 
-
-          <label for="lname">Seller Last Name:</label>
-          <input type="text" id="lname" name="user_last_name"><br>
-          <br>
-          
-          <label for="wallet">Seller Wallet Address:</label>
-          <input class="input-long" type="text" id="wallet" name="user_wallet" placeholder="  0x1a2b3c4d5e6f7g8h9i0j1a2b3c4d5e6f7g8h9i0j"><br>
-          <br>
-
-          <label for="purchasePrice">Purchase Price: $</label>
-          <input type="number" id="purchasePrice" name="purchasePrice">
-
-          <label for="deposit"> Deposit Amount: $</label>
-          <input type="number" id="deposit" name="user_deposit"></input>
-          
-          <!-- <label>Age:</label>
-          <input type="radio" id ="under_13" value="under_13" name="user_age"><label for="under_13" class="light">Under 13</label><br>
-          <input type="radio" id ="over_13" value="over_13" name="user_age"><label for="over_13" class="light">13 or older</label> -->
-          
-        </fieldset>
-        <br>
-        <br>
-        <fieldset>
-          
-          <legend><span class="number">2.</span> Property Profile</legend>    
-          
-          <label for="address">Property Street Address:</label>
-          <input type="text" id="address" name="propertyAddress">
-
-          <label for="city">City:</label>
-          <input type="text" id="city" name="propertyCity">
-
-          <label for="state">State:</label>
-          <select class="select" id="state" name="state">
-            <option class="option" value="pennsylvania">PA</option>
-          </select>
-
-          <label for="zip">Zip Code:</label>
-          <input class="input-short" type="text" id="zip" name="propertyZip"><label for="zip"> 5 digits</label><br>
-          <br>
-
-          
-
-          <label for="type">Property type:</label>
-          <select class="select" id="type" name="property_type">
-            <option class="option" value="single_family_home">Single family home</option>
-            <option class="option" value="condominium">Condominium</option>
-            <option class="option" value="multi_family">Multi-family home(duplex, triplex)</option>
-            <option class="option" value="other">Other</option>
-          </select>
-
-          <label for="other">If other is selected, fill in property type: </label>
-          <input class="input-long" type="text" id="other" name="user_other"></input><br>
-          <br>
-          <label for="prop_id">Token ID:</label>
-          <input type="number" id="prop_id" name="user_prop_id"></input>
-          <label for="other"><em>Seller gets token id from courthouse prior to listing property for sale.</em>em> </label>
-        </fieldset>
-         <br>
-         <br>  
-          
-          <!-- <label>Interests:</label>
-          <input type="checkbox" id="development" value="interest_development" name="user_interest"><label class="light" for="development">Development</label<br>
-           <input type="checkbox" id="design" value="interest_design" name="user_interest"><label class="light" for="design">Design</label<br>
-           <input type="checkbox" id="business" value="interest_business" name="user_interest"><label class="light" for="business">Business</label> -->
-        </fieldset><br>
-       
-        <fieldset>
-            <input type="checkbox" id ="submit" value="submit" name="user_submit"><label for="confirm" class="light"> I certify that the information on this page 
-                is true and complete and that I am lawfully authorized to execute this sale/purchase contract. By clicking Submit, I understand that the contract will be executed and will proceed toward a final execution when all conditions have been met.</label><br>
-                <br>
-            <!-- Submit formaction telling where the input information will go. -->
-            <!-- Submit formenctype telling what format data will be sent in -->
-            <button class="button2" type="submit" formaction="/index_2.html" formenctype="multipart/form-data"
-            value="Submit as Multipart/form-data">Initiate Token Transfer</button>  
-            
-             <!--Add fine print / disclosure information here?  -->
-        </fieldset>
-      </form>      
+    </header>
       
+
+    <div class="flex-container">
+    
+      <!-- <form action="/purchase.sol" method="post"> -->
+     
+        <!-- <label>Today's Date is: </label><input type="date" id="date" name="date" readonly> -->
+        <div class="datewrap">
+            <label>Today's Date is: </label>&nbsp;<label id="date"></label>
+            <label>&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Buyer's Deposit Deadline is 11:59pm on </label>&nbsp;<label id="depositdate"></label>
+            <label>&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Transfer Deadline is 11:59pm on </label>&nbsp;<label id="transferdate"></label>
+
+            <script>
+                n =  new Date();
+                y = n.getFullYear();
+                m = n.getMonth() + 1;
+                d = n.getDate();
+                document.getElementById("date").innerHTML = m + "/" + d + "/"+ y;  
+            </script>
+            
+            <script>
+                n =  new Date();
+                y = n.getFullYear();
+                m = n.getMonth() + 1;
+                d = n.getDate() + 3;
+                document.getElementById("depositdate").innerHTML = m + "/" + d + "/"+ y;  
+            </script>
+
+            <script>
+                n =  new Date();
+                y = n.getFullYear();
+                m = n.getMonth() + 1;
+                d = n.getDate() + 60;
+                document.getElementById("transferdate").innerHTML = m + "/" + d + "/"+ y;  
+            </script>
+            <br>
+            <br>
+            
+        </div>  
+        
+            <div class="sentence">
+            <label>Today is the <strong>official purchase date</strong> and will be used to benchmark both the seller's and buyer's obligations toward the token transfer date.</label>
+                <br>
+                <br>
+            </div>
+
+            <div class="boxwrap">
+              <div class="box">   
+                  <br>
+                  <br>
+                <fieldset>
+                
+                <legend><span class="number">1.</span> Seller Transaction Information</legend>
+                
+                <label for="fname">First Name:</label>
+                <input class="heighttext" type="text" id="fname" name="user_first_name"> 
+
+                <label for="lname">&nbsp;&nbsp;Last Name:</label>
+                <input class="heighttext" type="text" id="lname" name="user_last_name">
+                
+                <label for="wallet">&nbsp;&nbsp;Seller Wallet Address:</label>
+                <input class="input-long" type="text" id="wallet" maxlength="42" name="user_wallet" 
+                placeholder=" 0x1a2b3c4d5e6f7g8h9i0j1a2b3c4d5e6f7g8h9i0j"><br>
+                <br>
+
+                <label for="purchasePrice">Purchase Price: $</label>
+                <input class="heighttext" type="number" id="purchasePrice" name="purchasePrice">
+
+                <label for="deposit">&nbsp;&nbsp;Deposit Amount: $</label>
+                <input class="heighttext" type="number" id="deposit" name="user_deposit"></input>
+                
+                <!-- <label>Age:</label>
+                <input type="radio" id ="under_13" value="under_13" name="user_age"><label for="under_13" class="light">Under 13</label><br>
+                <input type="radio" id ="over_13" value="over_13" name="user_age"><label for="over_13" class="light">13 or older</label> -->
+                
+                </fieldset>
+            </div>
+            <br>
+            <br>
+            <div class="box">
+                <fieldset>
+                
+                <legend><span class="number">2.</span> Property Profile</legend>    
+                
+                <label for="prop_id">Token ID:</label>
+                <input class="heighttext" type="text" id="prop_id" name="user_prop_id"></input>
+                <label for="other"><em>Seller gets token id from courthouse prior to listing property for sale.</em></label><br>
+                <br>
+
+                <label for="address">Property Address:</label>
+                <input class="input-long" type="text" id="address" name="propertyAddress">
+
+                <label for="city">&nbsp;&nbsp;City:</label>
+                <input class="heighttext" type="text" id="city" name="propertyCity">
+
+                <label for="state">&nbsp;&nbsp;State:</label>
+                <select class="select" id="state" name="state">
+                    <option class="option" value="pennsylvania">PA</option>
+                </select>
+
+                <label for="zip">&nbsp;&nbsp;Zip Code:</label>
+                <input class="input-short" type="text" id="zip" maxlength="5" name="propertyZip"><label for="zip"> 5 digits</label><br>
+                <br>
+
+                
+
+                <label for="type">Property type:</label>
+                <select class="select" id="type" name="property_type">
+                    <option class="option" value="single_family_home">Single family home</option>
+                    <option class="option" value="condominium">Condominium</option>
+                    <option class="option" value="multi_family">Multi-family home(duplex, triplex)</option>
+                    <option class="option" value="other">Other</option>
+                </select>
+
+                <label for="other">&nbsp;&nbsp;If other is selected, fill in property type: </label>
+                <input class="input-long" type="text" id="other" name="user_other"></input><br>
+                <br>
+                
+                </fieldset>
+                <br>
+                <br>  
+                
+                <!-- <label>Interests:</label>
+                <input type="checkbox" id="development" value="interest_development" name="user_interest"><label class="light" for="development">Development</label<br>
+                <input type="checkbox" id="design" value="interest_design" name="user_interest"><label class="light" for="design">Design</label<br>
+                <input type="checkbox" id="business" value="interest_business" name="user_interest"><label class="light" for="business">Business</label> -->
+                </fieldset><br>
+            </div>
+            <div class="box">
+                <fieldset>
+                    <input class="checkbox" type="checkbox" id ="submit" value="submit" name="user_submit" style="width:20px;height:20px;"><label for="confirm" class="light"> I certify that the information on this page 
+                        is true and complete and that I am lawfully authorized to execute this token transfer. I understand that, when I click 
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Initiate Token Transfer</strong>, the transfer will be initiated and will proceed toward a final token transfer when all conditions have been met.</label><br>
+                        <br>
+                    <!-- ?? Submit formaction telling where the input information will go. -->
+                    <!-- ?? Submit formenctype telling what format data will be sent in -->
+                    <button class="button2" type="submit" onclick="initiateTransfer()">Initiate Token Transfer</button>  
+                    
+                    <!--Add fine print / disclosure information here?  -->
+                </fieldset>
+            </div>
+        </div> 
+      <!-- </form>       -->
+    </div> 
     </body>
 </html>
