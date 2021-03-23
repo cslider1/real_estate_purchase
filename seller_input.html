@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/re_style.css">
-        <script src="js/re.js"></script>
+        
         <script src=”./node_modules/web3/dist/web3.min.js”></script>
 
 
@@ -25,15 +25,15 @@
             </header>
         </div>
             <p align: right;>
-                <label class="header-label">&nbsp;&nbsp;Today's Date is: </label><label class="header-label" id="date"></label>
+                <label class="header-label">&nbsp;&nbsp;Today's Date is: </label><label class="header-label" id="date" getTime();></label>
             
-                <script>
+                <!-- <script>
                     n =  new Date();
                     y = n.getFullYear();
                     m = n.getMonth() + 1;
                     d = n.getDate();
                     document.getElementById("date").innerHTML = m + "/" + d + "/"+ y;  
-                </script>
+                </script> -->
             </p>
             <br>
     
@@ -150,16 +150,17 @@
               <input class="checkbox" type="checkbox" id ="submit" value="submit" name="user_submit" required>
               <label for="confirm" class="light"> I certify that the information on this page 
                 is true and complete and that I am lawfully authorized to execute this token transfer. I understand that, when I click 
-                <strong>Initiate Property Sale</strong>, the &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transfer will be initiated and will proceed toward a final token transfer when all conditions have been met.</label><br>
+                <strong>Initiate Property Sale</strong>, the transfer will be initiated and will proceed toward a final token transfer when all conditions have been met.</label><br>
                 <br>
                 <br>
             <!-- ?? Submit formaction telling where the input information will go. -->
             <!-- ?? Submit formenctype telling what format data will be sent in -->
-            <button class="button2" type="submit" onclick="validation">Initiate Property Sale</button>
+            <!-- <a href="confirm_page.html"></a> -->
+            <button class="button2" type="submit" onclick="location.href='confirm_page.html'" validation();>Initiate Property Sale</button>
               
             </fieldset>
           </div>
-          <script>
+          <!-- <script>
           function validation() {
             var name = document.getElementById("token_id").value;
             var email = document.getElementById("email").value;
@@ -174,13 +175,15 @@
             return true;
             }
           }
-          </script>
+          </script> -->
         </form>
     </div> 
 
     <footer>
       <br>
-      <p style="text-align: center;" font-size: 12px;> © 2021 #RealEstateRevolution </p>
+      <p style="text-align: center;" font-size: 12px;> © 2021 #RealEstateSmartContract </p>
     </footer>
+    <script src="js/re.js"></script>
     </body>
+  
 </html>

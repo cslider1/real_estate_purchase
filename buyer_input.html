@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/re_style.css">
-        <script src="js/re.js"></script>
+        <!-- <script src="js/re.js"></script> -->
 
     </head>
     <body>
@@ -23,14 +23,16 @@
           </header>
         </div>
           <p align: right;>
-              <label class="header-label">&nbsp;&nbsp;Today's Date is: </label><label class="header-label" id="date"></label>
-              <script>
+              <!-- <label class="header-label">&nbsp;&nbsp;Today's Date is: </label><label class="header-label" id="date"></label> -->
+              <label class="header-label">&nbsp;&nbsp;Today's Date is: </label><label class="header-label" id="date" getTime();></label>
+
+             <!-- <script>
                   n =  new Date();
                   y = n.getFullYear();
                   m = n.getMonth() + 1;
                   d = n.getDate();
                   document.getElementById("date").innerHTML = m + "/" + d + "/"+ y;  
-              </script>
+              </script> -->
           </p>
           <br>
         <div class="box">   
@@ -181,14 +183,14 @@
               <br>
               <br>
               <br>
-              <input type="checkbox" id ="submit" value="submit" name="user_submit"><label for="confirm" class="light"> I certify that the information on this page 
+              <input type="checkbox" id ="submit" value="submit" name="user_submit" required><label for="confirm" class="light"> I certify that the information on this page 
                   is true and complete and that I am lawfully authorized to execute this token transfer contract. By clicking Submit, 
-                  I understand that the contract will &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;be executed and will proceed toward a final token transfer when all conditions have been met.</label><br>
+                  I understand that the contract will be executed and will proceed toward a final token transfer when all conditions have been met.</label><br>
                   <br>
                   <br>
               <!-- Submit formaction telling where the input information will go. -->
               <!-- Submit formenctype telling what format data will be sent in -->
-              <button class="button2" type="submit" onclick="dApp.transferProperty()">Initiate Property Purchase</button>  
+              <button class="button2" type="submit" validation();>Initiate Property Purchase</button>  
               
               <!--Add fine print / disclosure information here?  -->
           </fieldset>
@@ -197,9 +199,11 @@
 
         <footer>
           <br>
-          <p style="text-align: center;" font-size: 12px;> © 2021 #RealEstateRevolution </p>
+          <p style="text-align: center;" font-size: 12px;> © 2021 #RealEstateSmartContract </p>
         </footer>
 
+        <script src="js/re.js"></script>
+        
         <!-- JQuery 3.4.1 slim minified -->
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
         <!-- Compiled and minified JavaScript for Materialize CSS -->

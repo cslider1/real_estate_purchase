@@ -54,6 +54,12 @@ main p {
   text-align: center;
 }
 
+footer {
+  margin-top: -10px;
+  /* color: #72060f; */
+  color: black;
+}
+
 /* label {
   display: flex;
   text-align: left;
@@ -72,7 +78,7 @@ input {
 }
 
 option {
-  font-family: hevetica;
+  font-family: helvetica;
   font-size: 14px;
   flex: 0 0 20px;
   margin-left: 10px;
@@ -92,31 +98,54 @@ legend {
     font-size: 1.5em;
     padding: 20;
 } 
-ul,
-ol {
+
+ul {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  list-style-position: inside;
+  list-style-type: none;
+  justify-content: right;
+  margin: 0 0 1em 2em;
+  padding: 0;
+  
+}
+
+li {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  float: left;
+  display: block;
+  padding: 0 0 20px 20px;
+  /* display: inline; */
+  line-height: 1;
+  /* justify-content: right; */
+  margin: 0 0 15px 10px;
+   
+  background-color: (27, 27, 122);
+  /* background-color: white; */
+  /* border-radius: 5px;
+  box-shadow: 0 2px 0 rgba(0,0,0, 0.2);  */
+}
+/* ol {
   list-style-position: inside;
   font-size: 1em;
   margin: 0;
   padding: 5;  
-}
-li {
-  line-height: 1;
-  margin: 0 0 .5em;
-  color: #72060f; 
-  padding: 0.4em;
-  background-color: white;
-  border-radius: 5px;
-  box-shadow: 0 2px 0 rgba(0,0,0, 0.2); 
-}
+} */
 
 /* Classes */
 
+.image-float {
+  display: inline-flex;
+  padding: 10px 25px 10px 10px;
+}
+
 .landing-container {
-  display: flex;
+  display: inline;
   flex-direction: column;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  padding: 5px 0 0 15px;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+  padding: 5px 5 5 5px;
   background-color: rgb(27, 27, 122);
   color: white;
 }
@@ -127,11 +156,13 @@ li {
 }
 
 .header-label{
-  font-family: Arial, Helvetica, sans-serif;
-  color: #72060f;
+  font-family: helvetica;
+  /* color: #72060f; */
+  color: white;
   /* background-color: white; */
   font-size: 20px;
-  margin-left: 15px;
+  /* margin-left: 15px; */
+  text-align: right;
 }
 
 .landing-text {
@@ -139,6 +170,13 @@ li {
   font-size: 18px;
   padding-left: 2em;
   color: black;
+}
+
+.nav{
+  font-family: helvetica;
+  font-size: 16px;
+  background-color: rgb(27, 27, 122);
+  color: white;
 }
 
 .flex-container {

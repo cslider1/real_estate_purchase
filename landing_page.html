@@ -7,34 +7,48 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/re_style.css">
-        <script src="js/re.js"></script>
+        <!-- <script src="js/re.js"></script> -->
 
     </head>
     <body>
-      
+      <!-- <img class="image-float" src="img/philly.png" alt="logo"; align="left";> -->
+
+      <!-- Use flexbox "space between items?" or justify instead of @nbsp; justify-container: space-between; -->
         <div class="landing-container">
           <header>
-            <img src="img/philly.png" alt="logo"; align="left";>
+            <img class="image-float" src="img/philly.png" alt="logo"; align="left";>
             <br>
-            <h3 style="display: inline;"> &nbsp;&nbsp;Real Estate Token Transfer Portal &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (demo)</h3>
-            <p class = "header-text">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for all real estate smart contract sales/purchases</p>
+            <h3>Real Estate Token Transfer Portal</h3>
+            <p class = "header-text">For all your real estate smart contract sales/purchases
+            <label class="header-label">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Today's Date is: </label><label class="header-label" id="date" getTime();></label>
+            </p>
+            <br>
+            <ul>
+              <li><a href="confirm_page.html">About</a></li>
+              <li><a href="seller_input.html">Seller</a></li>
+              <li><a href="buyer_input.html">Buyer</a></li>
+              <li><a href="confirm_page.html">Contact Us</a></li>
+            </ul>
+            <br>
            
           </header>
         </div>
         <p align: right;>
-          <label class="header-label">&nbsp;&nbsp;Today's Date is: </label><label class="header-label" id="date"></label>
-      
-          <script>
+          <!-- <label class="header-label">&nbsp;&nbsp;Today's Date is: </label><label class="header-label" id="date" getTime();></label> -->
+
+          <!-- <script>
               n =  new Date();
               y = n.getFullYear();
               m = n.getMonth() + 1;
               d = n.getDate();
               document.getElementById("date").innerHTML = m + "/" + d + "/"+ y;  
-          </script>
+          </script> -->
       </p>
           <br>
           <br>
-          
+          <!-- <a class="logo left" href="https://www.bhphotovideo.com" data-selenium="rootPageLink" title="B&amp;H Photo Video Pro Audio">
+            <svg alt="B&amp;H Photo Video Pro Audio"><use xlink:href="#bhlogo"></use></svg> -->
+         </a>
         <fieldset>
           <legend><span> Real Estate Transfer Portal </span></legend>
           <p class="landing-text">Welcome to the DEMO portal for transacting your smart contract real estate transfer. 
@@ -65,9 +79,12 @@
       </form>      
       <footer>
         <br>
-        <p style="text-align: center;" font-size: 12px;> © 2021 #RealEstateRevolution </p>
+        <p style="text-align: center;" font-size: 12px;> © 2021 #RealEstateSmartContract </p>
       </footer>
+
     </body>
+    
+    <script src="js/re.js"></script>
 </html>
 
 

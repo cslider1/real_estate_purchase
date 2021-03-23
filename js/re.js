@@ -1,31 +1,55 @@
 
-document.addEventListener("DOMContentLoaded", function(){
-
-    var d = new Date();
-    document.getElementById("date").innerHTML = d;
-
-console.log(date_field, "date help")
-
-});  // native browser event and callback
-
-function testJS() {
-    var b = document.getElementById('fname').value,
-        href = 'buyer_solidity_form.html' + encodeURIComponent(b);
-
-    document.location.href = href;
+function getTime() {
+    // document.getElementById("date").innerHTML = m + "/" + d + "/"+ y;
+    let n =  new Date();
+    // y = n.getFullYear();
+    // m = n.getMonth() + 1;
+    // d = n.getDate();
+    let dateAsString = n.toLocaleDateString();
+    return dateAsString;
 }
 
-function onLoad () {
-    var href = document.location.href,
-        params = url.split('?')[1].split('&'),
-        data = {}, tmp;
-    for (var i = 0, l = params.length; i < l; i++) {
-         tmp = params[i].split('=');
-         data[tmp[0]] = tmp[1];
+document.getElementById("date").innerHTML = getTime();  // This is the global scope.
+
+function validation() {
+    var name = document.getElementById("token_id").value;
+    var email = document.getElementById("email").value;
+    var emailReg = /^([w-.]+@([w-]+.)+[w-]{2,4})?$/;
+    if (name === '' || email === '') {
+    alert("Please input all fields.");
+    return false;
+    } else if (!(email).match(emailReg)) {
+    alert("Invalid Email.");
+    return false;
+    } else {
+    return true;
     }
-    document.getElementById('fname').innerHTML = data.name;
-    onload="onLoad";
-}
+  }
+// document.addEventListener("DOMContentLoaded", function(){
+//     let n = document.getElementById("date").innerHTML = m + "/" + d + "/"+ y;
+//     n.value = new Date();
+//     y = n.getFullYear();
+//     m = n.getMonth() + 1;
+//     d = n.getDate();
+
+//     // let now = document.getElementById("date"); 
+//     // now.dateFormat("longTime");
+    
+//     // var d = new Date();
+//     // document.getElementById("datePicker").innerHTML = d.toDateString();
+   
+// console.log(date_field, "date help")
+
+// document.addEventListener("DOMContentLoaded", function(){
+
+//     var d = new Date();
+//     document.getElementById("date").innerHTML = d;
+
+// console.log(date_field, "date help")
+
+// });  // native browser event and callback
+
+
 
 // document.addEventListener("DOMContentLoaded", function(){
 //     let date_field = document.getElementById("date");
@@ -42,8 +66,6 @@ function onLoad () {
 
 // });  // native browser event and callback
 
-function initiateTransfer {
-    
-}
+
 
 
