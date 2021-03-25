@@ -7,34 +7,74 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/re_style.css">
-        <!-- <script src="js/re.js"></script> -->
-
+        <script src="js/re.js"></script>
     </head>
-    <body>
+
+  
+    <body onload="myFunction()">
       <!-- <img class="image-float" src="img/philly.png" alt="logo"; align="left";> -->
 
       <!-- Use flexbox "space between items?" or justify instead of @nbsp; justify-container: space-between; -->
-        <div class="landing-container">
+        <div class="wrapper">
           <header>
-            <img class="image-float" src="img/philly.png" alt="logo"; align="left";>
+            <div class="box1">
+              <!-- <img class="image-float" src="img/philly.png" alt="logo"; align="left";> -->
+              <img src="img/philly.png" alt="logo";>
+            </div>
+            <div class="box2">
+              <h3>Real Estate Token Transfer Portal</h3>
+            </div>
+            <div class="box3">
+              <p class = "header-text">For all your real estate smart contract sales/purchases</p>
+            </div>
+            <div class="box4">
+              <p class="header-label">Today's Date is: </p>
+              <label class="header-label" id="date" myFunc();></label>
+              <!-- <label class="header-label">Today's Date is: </label>
+              <label class="header-label" id="date" myFunc();></label> -->
+            </div>
+          
+            <script>
+              function myFunction() {
+                var d = new Date();
+                var n = d.toLocaleDateString();
+                // var n = d.getTime();
+                // var dateAsString = d.toLocaleDateString();
+                // return dateAsString;
+                document.getElementById("date").innerHTML = n;
+              }
+              </script>
+          
             <br>
-            <h3>Real Estate Token Transfer Portal</h3>
-            <p class = "header-text">For all your real estate smart contract sales/purchases
-            <label class="header-label">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Today's Date is: </label><label class="header-label" id="date" getTime();></label>
-            </p>
-            <br>
-            <ul>
+            <nav>
+              <a href="confirm_page.html">About</a>
+              <a href="seller_input.html">Seller</a>
+              <a href="buyer_input.html">Buyer</a>
+              <a href="confirm_page.html">Contact Us</a>
+            </nav>
+
+            <!-- <ul class="nav">
               <li><a href="confirm_page.html">About</a></li>
               <li><a href="seller_input.html">Seller</a></li>
               <li><a href="buyer_input.html">Buyer</a></li>
               <li><a href="confirm_page.html">Contact Us</a></li>
-            </ul>
+            </ul> -->
             <br>
-           
+            <!-- <script>
+              function getTime() {
+                let n = new Date();
+                let dateAsString = n.toLocaleDateString();
+                return dateAsString;
+              }
+              </script> -->
+
           </header>
         </div>
         <p align: right;>
+
           <!-- <label class="header-label">&nbsp;&nbsp;Today's Date is: </label><label class="header-label" id="date" getTime();></label> -->
+
+          
 
           <!-- <script>
               n =  new Date();
@@ -84,7 +124,7 @@
 
     </body>
     
-    <script src="js/re.js"></script>
+    <!-- <script src="js/re.js"></script> -->
 </html>
 
 

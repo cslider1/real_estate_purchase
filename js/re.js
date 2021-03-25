@@ -1,15 +1,13 @@
 
-function getTime() {
-    // document.getElementById("date").innerHTML = m + "/" + d + "/"+ y;
-    let n =  new Date();
-    // y = n.getFullYear();
-    // m = n.getMonth() + 1;
-    // d = n.getDate();
-    let dateAsString = n.toLocaleDateString();
-    return dateAsString;
+function myFunc() {
+  var d = new Date();
+  var n = d.getTime();
+  // var dateAsString = d.toLocaleDateString();
+  // return dateAsString;
+  document.getElementById("date").innerHTML = n;
 }
 
-document.getElementById("date").innerHTML = getTime();  // This is the global scope.
+// document.getElementById("date").innerHTML = getTime();  // This is the global scope.
 
 function validation() {
     var name = document.getElementById("token_id").value;
@@ -25,6 +23,7 @@ function validation() {
     return true;
     }
   }
+  
 // document.addEventListener("DOMContentLoaded", function(){
 //     let n = document.getElementById("date").innerHTML = m + "/" + d + "/"+ y;
 //     n.value = new Date();
