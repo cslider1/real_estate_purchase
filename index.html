@@ -15,21 +15,21 @@
       <!-- <img class="image-float" src="img/philly.png" alt="logo"; align="left";> -->
 
       <!-- Use flexbox "space between items?" or justify instead of @nbsp; justify-container: space-between; -->
-        <div class="wrapper">
-          <header>
+        
+        <header>
+          <div class="wrapper">
             <div class="box1">
-              <!-- <img class="image-float" src="img/philly.png" alt="logo"; align="left";> -->
-              <img src="img/philly.png" alt="logo";>
+              <img class="image-float" src="img/philly.png" alt="logo"; align="left";>
+              <!-- <img src="img/philly.png" alt="logo";> -->
             </div>
             <div class="box2">
               <h3>Real Estate Token Transfer Portal</h3>
             </div>
             <div class="box3">
-              <p class = "header-text">For all your real estate smart contract sales/purchases</p>
+              <p class = "header-text">For all your real estate smart contract transactions</p>
             </div>
             <div class="box4">
-              <p class="header-label">Today's Date is: </p>
-              <label class="header-label" id="date" myFunc();></label>
+              <!-- <p class="header-label">Today's Date is:  </p> <label class="header-label" id="date" myFunc();></label> -->
               <!-- <label class="header-label">Today's Date is: </label>
               <label class="header-label" id="date" myFunc();></label> -->
             </div>
@@ -46,19 +46,6 @@
               </script>
           
             <br>
-            <nav>
-              <a href="confirm_page.html">About</a>
-              <a href="seller_input.html">Seller</a>
-              <a href="buyer_input.html">Buyer</a>
-              <a href="confirm_page.html">Contact Us</a>
-            </nav>
-
-            <!-- <ul class="nav">
-              <li><a href="confirm_page.html">About</a></li>
-              <li><a href="seller_input.html">Seller</a></li>
-              <li><a href="buyer_input.html">Buyer</a></li>
-              <li><a href="confirm_page.html">Contact Us</a></li>
-            </ul> -->
             <br>
             <!-- <script>
               function getTime() {
@@ -67,15 +54,26 @@
                 return dateAsString;
               }
               </script> -->
-
-          </header>
-        </div>
-        <p align: right;>
-
-          <!-- <label class="header-label">&nbsp;&nbsp;Today's Date is: </label><label class="header-label" id="date" getTime();></label> -->
-
-          
-
+          </div>
+        </header>
+ 
+        <nav>
+          <div class="nav_wrapper">
+            <div class="nav1">
+              <label class="header-label">Today's Date: &nbsp;<label class="header-label" id="date" myFunc();></label></label>
+            </div>
+            <div class="nav2">
+              <a href="confirm_page.html">About</a>
+              <a href="seller_input.html">Seller</a>
+              <a href="buyer_input.html">Buyer</a>
+              <a href="confirm_page.html">Contact Us</a>
+            </div>  
+            <div class="nav3">
+              <img class="image-float2" src="img/philly.png" alt="logo"; align="right";>
+            </div>
+          </div>
+        </nav>
+    
           <!-- <script>
               n =  new Date();
               y = n.getFullYear();
@@ -83,7 +81,6 @@
               d = n.getDate();
               document.getElementById("date").innerHTML = m + "/" + d + "/"+ y;  
           </script> -->
-      </p>
           <br>
           <br>
           <!-- <a class="logo left" href="https://www.bhphotovideo.com" data-selenium="rootPageLink" title="B&amp;H Photo Video Pro Audio">
@@ -91,7 +88,7 @@
          </a>
         <fieldset>
           <legend><span> Real Estate Transfer Portal </span></legend>
-          <p class="landing-text">Welcome to the DEMO portal for transacting your smart contract real estate transfer. 
+          <p class="landing-text">Welcome to the city's portal for transacting your smart contract real estate transfer. 
           Click the appropriate link below to take the next steps in the process:</p>
           <br>
           <br>
