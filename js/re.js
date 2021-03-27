@@ -1,11 +1,19 @@
-
-function myFunc() {
+function myFunction() {
   var d = new Date();
-  var n = d.getTime();
+  var n = d.toLocaleDateString();
+  alert("hello");
+  // var n = d.getTime();
   // var dateAsString = d.toLocaleDateString();
   // return dateAsString;
   document.getElementById("date").innerHTML = n;
 }
+
+
+document.addEventListener("DOMContentLoaded", function(){
+  myFunction();
+})
+
+
 
 // document.getElementById("date").innerHTML = getTime();  // This is the global scope.
 

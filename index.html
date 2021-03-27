@@ -8,19 +8,16 @@
         <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/re_style.css">
         <script src="js/re.js"></script>
+        
     </head>
 
   
-    <body onload="myFunction()">
-      <!-- <img class="image-float" src="img/philly.png" alt="logo"; align="left";> -->
-
-      <!-- Use flexbox "space between items?" or justify instead of @nbsp; justify-container: space-between; -->
-        
+    <body>
+      
         <header>
           <div class="wrapper">
             <div class="box1">
-              <img class="image-float" src="img/philly.png" alt="logo"; align="left";>
-              <!-- <img src="img/philly.png" alt="logo";> -->
+              <img class="image-float" src="img/philly.png" alt="logo">
             </div>
             <div class="box2">
               <h3>Real Estate Token Transfer Portal</h3>
@@ -28,65 +25,26 @@
             <div class="box3">
               <p class = "header-text">For all your real estate smart contract transactions</p>
             </div>
-            <div class="box4">
-              <!-- <p class="header-label">Today's Date is:  </p> <label class="header-label" id="date" myFunc();></label> -->
-              <!-- <label class="header-label">Today's Date is: </label>
-              <label class="header-label" id="date" myFunc();></label> -->
-            </div>
-          
-            <script>
-              function myFunction() {
-                var d = new Date();
-                var n = d.toLocaleDateString();
-                // var n = d.getTime();
-                // var dateAsString = d.toLocaleDateString();
-                // return dateAsString;
-                document.getElementById("date").innerHTML = n;
-              }
-              </script>
-          
-            <br>
-            <br>
-            <!-- <script>
-              function getTime() {
-                let n = new Date();
-                let dateAsString = n.toLocaleDateString();
-                return dateAsString;
-              }
-              </script> -->
           </div>
         </header>
  
         <nav>
-          <div class="nav_wrapper">
-            <div class="nav1">
-              <label class="header-label">Today's Date: &nbsp;<label class="header-label" id="date" myFunc();></label></label>
-            </div>
-            <div class="nav2">
-              <a href="confirm_page.html">About</a>
-              <a href="seller_input.html">Seller</a>
-              <a href="buyer_input.html">Buyer</a>
-              <a href="confirm_page.html">Contact Us</a>
-            </div>  
-            <div class="nav3">
-              <img class="image-float2" src="img/philly.png" alt="logo"; align="right";>
-            </div>
-          </div>
+          <ul class="menu">
+            
+            <li class="item"><a href="confirm_page.html">About</a></li>
+            <li class="item"><a href="seller_input.html">Seller</a></li>
+            <li class="item"><a href="buyer_input.html">Buyer</a></li>
+            <li class="item"><a href="confirm_page.html">Contact Us</a></li>
+            <li class="today"><label>Today's Date: &nbsp;<label id="date"></label></label></li>
+          </ul>
         </nav>
-    
-          <!-- <script>
-              n =  new Date();
-              y = n.getFullYear();
-              m = n.getMonth() + 1;
-              d = n.getDate();
-              document.getElementById("date").innerHTML = m + "/" + d + "/"+ y;  
-          </script> -->
-          <br>
-          <br>
-          <!-- <a class="logo left" href="https://www.bhphotovideo.com" data-selenium="rootPageLink" title="B&amp;H Photo Video Pro Audio">
-            <svg alt="B&amp;H Photo Video Pro Audio"><use xlink:href="#bhlogo"></use></svg> -->
-         </a>
-        <fieldset>
+
+        <div class="eth">
+          <a href="https://ethereum.org/en/developers/docs/smart-contracts/#:~:text=A%20%22smart%20contract%22%20is%20simply%20a%20program%20that,and%20they%20can%20send%20transactions%20over%20the%20network."><img src="img/token.jpg" alt="token">
+          </a>
+        </div>
+        <div>
+          <fieldset>
           <legend><span> Real Estate Transfer Portal </span></legend>
           <p class="landing-text">Welcome to the city's portal for transacting your smart contract real estate transfer. 
           Click the appropriate link below to take the next steps in the process:</p>
@@ -110,21 +68,12 @@
               <br>
             <p class="landing-text"></p>
 
-              
-           
-        </fieldset>
-      </form>      
+          </fieldset>
+        </div>    
       <footer>
         <br>
         <p style="text-align: center;" font-size: 12px;> © 2021 #RealEstateSmartContract </p>
       </footer>
-
+      
     </body>
-    
-    <!-- <script src="js/re.js"></script> -->
 </html>
-
-
-
-<!-- formaction="/index_2.html" formenctype="multipart/form-data"
-            value="Submit as Multipart/form-data" -->
