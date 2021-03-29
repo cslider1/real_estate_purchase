@@ -1,7 +1,7 @@
 function myFunction() {
   var d = new Date();
   var n = d.toLocaleDateString();
-  alert("hello");
+  // alert("hello");
   // var n = d.getTime();
   // var dateAsString = d.toLocaleDateString();
   // return dateAsString;
