@@ -19,10 +19,11 @@
           </div>
           <div class="box2">
             <h2>City of Gotham</h2>
-          </div>
-          <div class="box3">
             <h3>Real Estate Token Transfer Portal</h3>
           </div>
+          <!-- <div class="box3">
+            <h3>Real Estate Token Transfer Portal</h3>
+          </div> -->
         </div>
       </header>
  
@@ -38,11 +39,11 @@
       </nav>
 
       <div class="wrapper2">
-        <div>
-          <p class="text-box">What are smart contracts? --></p>
+        <div class="text-box">
+          <p class="text-box">What are smart contracts? &nbsp;&nbsp;⇨</p>
         </div>
         <div class="image-box">
-          <a href="https://ethereum.org/en/developers/docs/smart-contracts/#:~:text=A%20%22smart%20contract%22%20is%20simply%20a%20program%20that,and%20they%20can%20send%20transactions%20over%20the%20network.">
+          <a href="https://ethereum.org/en/developers/docs/smart-contracts/#:~:text=A%20%22smart%20contract%22%20is%20simply%20a%20program%20that,and%20they%20can%20send%20transactions%20over%20the%20network." onClick="return confirm('Linking to an external site. Click OK to continue.')">
             <img class="image-float2" src="img/token.png" alt="token">
           </a>
         </div>
@@ -50,30 +51,22 @@
 
       <div>
         <fieldset>
-        <legend><span> Real Estate Transfer Portal </span></legend>
-        <p class="landing-text">Welcome to the city's portal for transacting your smart contract real estate transfer. 
-        Click the appropriate link below to take the next steps in the process:</p>
-        <br>
-        <br>
-            
-            
-            <a href="seller_input.html">
-              <button class="button2" type="submit">I am the seller </button></a>
-              <label class="landing-text">The seller is required to take the first step to initiate the transfer.</label>
+          <legend><span> Real Estate Transfer Portal </span></legend>
+          <p class="portal-text">Welcome to the City of Gotham's portal for transacting your smart contract real estate transfer. 
+          Click the appropriate link below to take the next steps in the process:</p>
               
-            <br>
-            <br>
-            <br>
-            
+          <div class="seller">
+            <a href="seller_input.html">
+            <button class="button2" type="submit">I am the seller </button></a>
+            <p class="landing-text">The seller is required to take the first step to initiate the transfer.</p>
+          </div>
+          <div class="buyer">
             <a href="buyer_input.html">
-            <button class="button2" type="submit">I am the buyer </button></a>
-            <br>
-            <br>
-          <p class="landing-text"></p>
-
+            <button class="button2" type="submit" onClick="return confirm('Please confirm the Seller has completed their input before proceeding. Click OK to continue or Cancel to return.')">I am the buyer </button></a>
+            <p class="landing-text">The buyer will not be able to complete the next form unless the Seller has completed their input.</p>
+          </div>
         </fieldset>
       </div>    
-      
       <footer>
         <br>
         <p style="text-align: center;" font-size: 12px;> © 2021 #RealEstateSmartContract </p>

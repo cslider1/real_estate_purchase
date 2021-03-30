@@ -14,7 +14,8 @@ A self-guided demonstration is available at www.thecryptocrib.com. **Please note
 While all sub-pages are functional, the Main and Seller Input pages are the only ones that contain the project requirements. The following features have been included on one or both of these pages:
 
 * Navigation menu that expands or stacks at various screen sizes (CSS)
-* Flexbox Grid used to space items in the header (CSS)
+* Grid used to layout items in the header. (CSS)
+* Flexbox used to layout navigation bar and Ethereum link. (CSS)
 * All pages have a field that displays the current date. (JavaScript)
 * Form used for Seller Input information. Email address format is validated. (JavaScript)
 * The two pages were built with a mobile-first design. There are two media queries - one for desktop screen sizes and one for tablet screen sizes - that allow for the header, navigation, and page format to adjust for the appropriate screen size.

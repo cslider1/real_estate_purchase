@@ -17,20 +17,20 @@ document.addEventListener("DOMContentLoaded", function(){
 
 // document.getElementById("date").innerHTML = getTime();  // This is the global scope.
 
-function validation() {
-    var name = document.getElementById("token_id").value;
-    var email = document.getElementById("email").value;
-    var emailReg = /^([w-.]+@([w-]+.)+[w-]{2,4})?$/;
-    if (name === '' || email === '') {
-    alert("Please input all fields.");
-    return false;
-    } else if (!(email).match(emailReg)) {
-    alert("Invalid Email.");
-    return false;
-    } else {
-    return true;
-    }
-  }
+// function validation() {
+//     var name = document.getElementById("token_id").value;
+//     var email = document.getElementById("email").value;
+//     var emailReg = /^([w-.]+@([w-]+.)+[w-]{2,4})?$/;
+//     if (name === '' || email === '') {
+//     alert("Please input all fields.");
+//     return false;
+//     } else if (!(email).match(emailReg)) {
+//     alert("Invalid Email.");
+//     return false;
+//     } else {
+//     return true;
+//     }
+//   }
   
 // document.addEventListener("DOMContentLoaded", function(){
 //     let n = document.getElementById("date").innerHTML = m + "/" + d + "/"+ y;
