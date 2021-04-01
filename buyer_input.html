@@ -8,32 +8,32 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/re_style.css">
-        <!-- <script src="js/re.js"></script> -->
 
     </head>
     <body>
-    <div class="flex-container"></div>
-
-        <div class="landing-container">
-          <header>
-            <img src="img/philly.png" alt="logo"; align= "left";>
-            <br>
-            <h3 style="display: inline;"> &nbsp;&nbsp; Real Estate Token Transfer Portal &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(demo)</h3>
-            <p class = "header-text">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Buyer's Page</strong> &nbsp;--> &nbsp; property token purchase contract</p>   
-          </header>
+      <header>
+        <div class="wrapper">
+          <div class="box1">
+            <img class="image-float" src="img/gotham.png" alt="logo">
+          </div>
+          <div class="box2">
+            <h2>City of Gotham</h2>
+            <h3>Real Estate Token Transfer Portal</h3>
+          </div>
         </div>
-          <p align: right;>
-              <!-- <label class="header-label">&nbsp;&nbsp;Today's Date is: </label><label class="header-label" id="date"></label> -->
-              <label class="header-label">&nbsp;&nbsp;Today's Date is: </label><label class="header-label" id="date" getTime();></label>
-
-             <!-- <script>
-                  n =  new Date();
-                  y = n.getFullYear();
-                  m = n.getMonth() + 1;
-                  d = n.getDate();
-                  document.getElementById("date").innerHTML = m + "/" + d + "/"+ y;  
-              </script> -->
-          </p>
+      </header>
+ 
+      <nav>
+        <ul class="menu">
+          <li class="today"><label>Today's Date: &nbsp;<label id="date"></label></label></li>
+          <li class="item"><a href="index.html">Home</a></li>
+          <li class="item"><a href="about_page.html">About</a></li>
+          <li class="item"><a href="seller_input.html">Seller</a></li>
+          <li class="item"><a href="buyer_input.html">Buyer</a></li>
+          <li class="item"><a href="contact_page.html">Contact Us</a></li>
+          
+        </ul>
+      </nav>
           <br>
         <div class="box">   
               <br>
@@ -216,8 +216,7 @@
             $('.collapsible').collapsible();
             });
         </script>
-        <!-- dApp JavaScript -->
-        <script src="dapp.js"></script>
+        <script src="js/re.js"></script>
 
     </body>
 </html>

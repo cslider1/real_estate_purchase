@@ -20,6 +20,10 @@ header {
   /* height: 25vh; */
 }
 
+img {
+  width: 70%;
+}
+
 h1 {
   font-size: 3.75vw;
   text-align: center;
@@ -30,15 +34,16 @@ h1 {
 h2 {
   font-size: 2.5em;
   font-weight: bolder;
-  /* text-align: left; */
 }
 
 h3 {
     /* font-size: 2.5vw; */
     font-size: 1.2em;
     font-weight: bolder;
-    /* text-shadow: 0 2px 0 rgba(0,0,0, 0.1) */
-    /* margin: 0.35em 0 0.5em; */
+}
+
+h4 {
+  font-size: 1.5em;
 }
 
 main p {
@@ -50,17 +55,9 @@ main p {
 
 footer {
   margin-top: -10px;
-  /* color: #72060f; */
+  padding: 1em;
   color: black;
 }
-
-/* label {
-  display: flex;
-  text-align: left;
-  width: 400px;
-  line-height: 26px;
-  margin-bottom: 10px;
-} */
 
 input {
   font-family: sans-serif;
@@ -88,7 +85,8 @@ fieldset {
 }
 
 legend {
-    color: #72060f;     
+    color: rebeccapurple;
+    /* color: #72060f;  */
     font-size: 1.5em;
     padding: 20px;
 } 
@@ -96,15 +94,16 @@ legend {
 nav {
   font-family: helvetica;
   background-color: rgb(169, 169, 180);
-  height: 17em;
+  height: 20em;
 }
 
 a {
   font-family: Tahoma;
-  font-size: 20px;
+  font-size: 18px;
   color: white;
   font-weight: 500;
   text-decoration: none;
+  padding: 1em;
 }
 
 ul {
@@ -116,27 +115,13 @@ ul {
 li {
   font-family: Arial, Helvetica, sans-serif;
   color: white;
-  line-height: 2em;
+  line-height: 1.6em;
   margin-top: .5em;
   margin-right: 2.5em;
-  padding-bottom: .5em;
+  padding: .5em;
   text-align: center;
 }
 
-/* img {
-  max-width: 100%;
-  height: auto;
-} */
-
-
-/* Classes */
-
-/* .image-float {
-  max-width: 100%;
-  height: auto;
-  padding: 10px 25px 20px 20px;
-  padding: 1em;
-} */
 
 /* HEADER - Grid Box */
 
@@ -169,59 +154,29 @@ li {
   grid-row-end: 3;
   text-align: center;
   margin-bottom: 0;
-  /* padding-left: 3em; */
 }
-
-/* .box3 {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 3;
-  grid-row-end: 4;
-  text-align: center;
-  margin-top: 0;
-} */
-
-/* Navigation Bar - Flex Box */
-
-/* .menu {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-} */
 
 .menu {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* align-items: center; */
   height: 3.5em;
   margin-top: 0;
- 
 }
 
 .item {
   order: 1;
-  width: 100%;
+  width: 60%;
   background: rgb(198, 198, 206);
   border-radius: 5px;
 }
 
 .item a:hover {
-  color: blue;
-  background: lightgray;
+  color: rebeccapurple;
+  font-weight: bolder;
 }
 
-/* Ethereum Link - Grid Box */
-
-/* .wrapper2 {
-  display: grid;
-  grid-template-columns: 11fr 1fr;
-  grid-auto-rows: 50px;
-  background-color: rgb(198, 198, 206); 
-  height: 4em;
-  margin-bottom: 1em;
-} */
+/* Ethereum Link */
 
 .wrapper2 {
   display: flex;
@@ -233,84 +188,15 @@ li {
 }
 
 .text-box {
-  /* margin-left: auto;
-  padding-top: 1em;
-  padding-right: .5em; */
-  font-size: 1.1em;
+  font-size: 1em;
   color: darkslateblue;
   font-weight: 300;
 }
 
 .image-box {
   display: block;
-  padding-left: 1em;
-  /* padding: 1em 3.5em 0 0; */
+  padding-left: 2em;
 }
-
-/* .text-box {
-  grid-column-start: 5;
-  grid-column-end: 6;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  text-align: right;
-  padding-top: 1em;
-  font-size: 1.3em;
-  color: blue;
-} */
-
-/* .image-box {
-  grid-column-start: 6;
-  grid-column-end: 7;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  padding: 1em 1.5em 0 0;
-} */
-
-/* .image-float2 {
-  display: block;
-} */
-
-/* .nav_wrapper {
-  display: grid;
-  grid-template-areas:
-    'date nav image';
-  grid-template-columns: 1fr 2fr 300px;
-  grid-template-rows: 50px;
-  display: inline;
-  flex-direction: column;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 5px 5 5 5px;
-  background-color: rgb(198, 198, 206);
-  color: white;
-} */
-
-/* .nav1 {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  grid-area: date;
-}
-
-.nav2 {
-  grid-column-start: 2;
-  grid-column-end: 5;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  text-align: right;
-  grid-area: nav;
-  border: solid pink 2px;
-}
-
-.nav3 {
-  grid-column-start: 5;
-  grid-column-end: 6;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  grid-area: image;
-
-}  */
 
 .header-text {
   font-family: helvetica;
@@ -324,7 +210,7 @@ li {
   font-size: 16px;
 }
 
-/* Fieldset Portal - Flex Box */
+/* Fieldset Portal - Flexbox */
 
 .buyer {
   display: flex;
@@ -358,63 +244,14 @@ li {
   margin-bottom: 1em;
 }
 
-/* .nav{
-  font-family: helvetica;
-  font-size: 20px;
-  background-color: rgb(198, 198, 206);
-  background-color: rgb(27, 27, 122);
-  color: white;
-}  */
-
-/* .flex-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  border-radius: 5px;
-} */
-
-/* .datewrap {
-  flex-direction: row;
-  flex-wrap: nowrap;
-  border: solid 2px dimgray;
-  font-size: 18px;
-  background-color: #685456;
-  color: white;
-  text-align: center;
-  padding: 15px 5px;
-}
-
-.sentence {
-  flex-direction: row;
-  flex-wrap: nowrap;
-  background-color: #685456;
-  color: white;
-  text-align: center;
-  font-size: 16px;
-  padding: 0 0 5px 0;
-}
-
-.col {
-  display: flex;
-  flex-direction: column;
-} */
-
-/* .boxwrap {
-  flex-direction: column;
-}
-
-.box {
-  flex-direction: column;
-  font-size: 15px;
-} */
-
 .button1 {
   width: 90px;
   height: 30px;
   font-family: helvetica;
   font-size: 16px;
   border-radius: 10px;
-  color: #72060f;
+  color: rebeccapurple;
+  /* color: #72060f; */
   background-color: white;
   margin-left: 10px;
   cursor: pointer;
@@ -427,7 +264,7 @@ li {
   font-size: 16px;
   font-weight: 400;
   border-radius: 10px;
-  color: #72060f;
+  color: rebeccapurple;
   background-color: white;
   cursor: pointer;
 }
@@ -435,13 +272,13 @@ li {
 .button1:hover {
   background: gainsboro;
   color: darkblue;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .button2:hover {
   background: gainsboro;
   color: darkblue;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .autopopulate {
@@ -550,89 +387,146 @@ li {
 }
 
 
-/* Media Queries */
+/* MEDIA QUERIES */
 
-/* Tablet */
-/* @media only screen and (max-width: 1023px) { */
+/* TABLET */
 
   @media all and (min-width: 700px) {
 
   body {
-    background-color: lightseagreen;
+    background-color: rgb(198, 198, 206); 
+  }
+
+  header {
+    height: 200px;
   }
 
   h2 {
-    font-size: 5vw;
+    font-size: 45px;
     font-weight: bolder;
     text-align: left;
   }
 
+  h3 {
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: left;
+  }
+  
   nav {
-    height: 4em;
+    height: 225px;
   }
 
-    .menu {
-      /* align-items: flex-start; */
-      flex-wrap: wrap;
-      /* background: none; */
-      list-style-type: none;
-    }
+  img {
+    width: 70%;
+  }
 
-    .today {
-      order: 0;
-      display: inline;
-      float: left;
-      width: 100%;
-    }
-    
-    .item {
-      flex: 1 1 50%
-      /* order: 1;
-      position: relative;
-      float: right;
-      justify-content: space-between;
-      background: none; */
-    }
+  ul {
+    margin-right: 2em;
+  }
 
-    /* .item {
-      order: 1;
-      position: relative;
-      justify-content: space-between;
-      display: block;
-      width: auto;
-      padding-bottom: 15px;
-      background: none;
-    } */
+  li {
+    line-height: 1.5em;
+    margin-top: .5em;
+    width: 40%;
+    padding-bottom: .5em;
+    text-align: center;
+  }
 
-    .wrapper2 {
-      height: 4em;
-      margin-top: .2em;
-      margin-bottom: 1em;
-    }
-    .button2 {
-      width: 350px;
-      height: 40px;
-    }
+  .wrapper {
+    display: grid;
+    grid-template-columns: 200px 2fr 1fr;
+    grid-auto-rows: 80px;
+    background-color: rgb(27, 27, 122);
+    color: white;
+  }
+  
+  .box1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding-top: 1.5em;
+    padding-left: 2em;
+  }
+  
+  .box2 {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-left: 6em;
+  }
+  
+  .box3 {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    padding-left: 3em;
+  }
+
+  .today {
+    display: inline;
+    float: center;
+    width: 100%;
+    margin-bottom: .5em;
+  }
+  
+  .item {
+    flex: 1 1 40%;
+    margin: auto;
+    margin-bottom: .5em;
+    background: rgb(117, 85, 151);
+  }
+
+  .item a:hover {
+    color: white;
+  }
+
+  .wrapper2 {
+    height: 4em;
+    margin-top: .5em;
+    margin-bottom: 1em;
+  }
+
+  .text-box {
+    font-size: 1.2em;
+  }
+
+  .button2 {
+    width: 350px;
+    height: 40px;
+  }
 
 
-/* Desktop */
+/* DESKTOP */
  
   @media all and (min-width: 1130px) {
 
-    body {
-      background-color: rgb(198, 198, 206); 
+    header {
+      height: 200px;
     }
 
     h2 {
-      font-size: 50px;
+      font-size: 45px;
+      font-weight: bolder;
+      text-align: left;
+    }
+
+    h3 {
+      font-size: 30px;
       font-weight: bolder;
       text-align: left;
     }
     
     nav {
       height: 3.5em;
-    
     }
+
+    /* img {
+      width: 70%;
+    } */
 
     .wrapper {
       display: grid;
@@ -640,7 +534,6 @@ li {
       grid-auto-rows: 80px;
       background-color: rgb(27, 27, 122);
       color: white;
-      height: 25vh;
     }
     
     .box1 {
@@ -648,7 +541,8 @@ li {
       grid-column-end: 2;
       grid-row-start: 1;
       grid-row-end: 2;
-      max-width: 50%;
+      padding-top: 1.5em;
+      padding-left: 2em;
     }
     
     .box2 {
@@ -656,7 +550,7 @@ li {
       grid-column-end: 7;
       grid-row-start: 1;
       grid-row-end: 2;
-      padding-left: 3em;
+      margin-left: 6em;
     }
     
     .box3 {
@@ -684,19 +578,10 @@ li {
     .item {
       order: 1;
       position: relative;
-      /* margin-left: 15em; */
-      /* width: auto; */
       float: right;
       justify-content: space-between;
       background: none;
     }
-
-    /* .wrapper2 {
-      margin-top: .2em;
-      height: 4em;
-      margin-bottom: 1em;
-      justify-content: space-between;
-    } */
 
     .wrapper2 {
       display: flex;
@@ -707,16 +592,11 @@ li {
       margin-bottom: 1em;
     }
     
-    /* .text-box1 {
-      display: block;
-      text-align: right;
-    } */
-    
     .text-box {
       margin-left: auto;
       padding-top: 1em;
       padding-right: .5em;
-      font-size: 1em;
+      font-size: 1.1em;
       color: darkslateblue;
       font-weight: 300;
     }
@@ -736,14 +616,10 @@ li {
     .buyer {
       display: block;
       flex-wrap: wrap;
-      /* margin-bottom: 2em;
-      margin-left: 2em; */
     }
     
     .seller {
       display: block;
-      /* margin-bottom: 2em;
-      margin-left: 2em; */
     }
 
     .button2 {
