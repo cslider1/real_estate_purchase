@@ -7,12 +7,11 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/re_style.css">
-        <!-- <script src="js/re.js"></script> -->
-
-    </head>
+        </head>
+    
     <body>
       <header>
-        <div class="wrapper">
+        <div class="head-wrapper">
           <div class="box1">
             <img class="image-float" src="img/gotham.png" alt="logo">
           </div>
@@ -40,12 +39,19 @@
             You have successfully taken the steps to initiate your smart contract real estate transfer.<br> 
             <br>
             The following details should be referenced when inquiring about your property transfer: </p>
+          <br>
+            <div class="row">
+              <label for="prop_id">Token ID:</label>
+              <input class="heighttext" type="text" id="prop_id" name="user_prop_id" value="1" readonly></input>
+            </div>
             <br>
-            <label for="prop_id">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Token ID:</label>
-            <input class="heighttext" type="text" id="prop_id" name="user_prop_id" value="1" readonly></input>
-
-            <label>&nbsp;&nbsp;&nbsp;&nbsp;Smart Contract Address:</label>
-            <input class="input-long" type="text" id="smart" name="smart" value="0x319184aC7A096c24Dc7C2df61Ba785feD2377BAf" readonly>
+            <br>
+            <div class="row">
+              <label>Smart Contract Address:</label>
+           </div>
+           <div class="input-long">
+             <input class="input-long" type="text" id="smart" name="smart" value="0x319184aC7A096c24Dc7C2df61Ba785feD2377BAf" readonly>
+           </div>
             <br>
             <br>   
              

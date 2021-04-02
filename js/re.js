@@ -24,19 +24,3 @@ const crypto = [
 const cryptoString = crypto.join(" ");
 document.getElementById("crypto1").innerHTML = cryptoString;
 
-
-// Email validation
-function ValidateEmail(inputText)
-  {
-    var mailformat = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/; 
-    if(inputText.value.match(mailformat))
-    {
-        // alert("Valid email address!");
-        return true;
-    }
-    else
-    {
-        alert("Invalid email address!");
-        return false;
-    }
-  }

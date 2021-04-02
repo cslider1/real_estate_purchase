@@ -218,9 +218,8 @@ li {
   font-family: helvetica;
   font-size: 18px;
   text-align: justify;
-  padding-left: 2em;
   color: black;
-  margin-bottom: 1em;
+  margin: 1em;
 }
 
 .row {
@@ -255,7 +254,7 @@ li {
   font-weight: 400;
   border-radius: 10px;
   margin-bottom: 2em;
-  margin-left: 7em;
+  margin-left: 1em;
   color: rebeccapurple;
   background-color: white;
   cursor: pointer;
@@ -353,7 +352,7 @@ li {
   }
 
   img {
-    width: 70%;
+    width: 120%;
   }
 
   ul {
@@ -429,6 +428,10 @@ li {
     font-size: 1.2em;
   }
 
+  .image-box {
+    width: 100px;
+  }
+
   .button2 {
     width: 250px;
     height: 40px;
@@ -458,6 +461,10 @@ li {
     width: 400px;
   }
 
+  .heighttext {
+    display: inline;
+    margin-bottom: 1em;
+  }
 
 /* DESKTOP */
  
@@ -561,14 +568,12 @@ li {
       width: 120px;
       padding: 1em 3.5em 0 0;
     }
-    .portal-text {
-      margin-bottom: 2em;
-    }
+    
     .landing-text {
       margin-bottom: 2em;
       display: inline-block;
     }
-    
+
     .input-long {
       font-family: Verdana, Geneva, Tahoma, sans-serif;
       font-size: 14px;
