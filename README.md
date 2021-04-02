@@ -11,14 +11,12 @@ There is an assumption that the local municipality has a system in place to toke
 
 A self-guided demonstration is available at www.thecryptocrib.com. **Please note this is not a secure site, and sensitive information should not be entered into the provided fields.**
 
-While all sub-pages are functional, the Main and Seller Input pages are the only ones that contain the project requirements. The following features have been included on one or both of these pages:
+While all sub-pages have limited functionality, the Home page (*index.html*) is the only one that contains the project requirements. The following features have been included:
 
 * Navigation menu that expands or stacks at various screen sizes (CSS)
 * Grid used to layout items in the header. (CSS)
-* Flexbox used to layout navigation bar and Ethereum link. (CSS)
+* Flexbox used to layout navigation bar and Ethereum smart contract link. (CSS)
 * All pages have a field that displays the current date. (JavaScript)
-* Form used for Seller Input information. Email address format is validated. (JavaScript)
-* The two pages were built with a mobile-first design. There are two media queries - one for desktop screen sizes and one for tablet screen sizes - that allow for the header, navigation, and page format to adjust for the appropriate screen size.
-
-
-TODO: The various input fields and other designated information will need to transfer to the contract whenever Submit is executed on the pages(web3.js)
+* The Home and About pages have an array of popular cryptocurrencies with links. (JavaScript)
+* Email address input is a validated field. (JavaScript)
+* The pages were built with a mobile-first design. There are two media queries - one for desktop screen sizes and one for tablet screen sizes - allowing for the header, navigation, and page format to adjust for the appropriate screen size.

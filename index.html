@@ -7,13 +7,12 @@
       <link rel="stylesheet" href="css/normalize.css">
       <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
       <link rel="stylesheet" href="css/re_style.css">
-      <script src="js/re.js"></script>
-      
+         
   </head>
   
     <body>
       <header>
-        <div class="wrapper">
+        <div class="head-wrapper">
           <div class="box1">
             <img class="image-float" src="img/gotham.png" alt="logo">
           </div>
@@ -35,7 +34,10 @@
         </ul>
       </nav>
 
-      <div class="wrapper2">
+      
+    
+
+      <div class="eth-wrapper">
         <div class="text-box">
           <p class="text-box">What are smart contracts? &nbsp;&nbsp;⇨</p>
         </div>
@@ -51,23 +53,52 @@
           <legend><span> Real Estate Transfer Portal </span></legend>
           <p class="portal-text">Welcome to the City of Gotham's portal for transacting your smart contract real estate transfer. 
           Click the appropriate link below to take the next steps in the process:</p>
-              
+          
+         
+          
+          <p class="portal-text">The seller is required to take the first step to initiate the transfer.</p>
+        
+          
+          <div class="row">
+            <label for="email" id="email">Seller Email:</label>
+          </div>
+          <form name="form1" action="#">
+          <div class="input-long">
+            <input class="input-long" type="email" id="email" name="email" placeholder="joeseller@email.com" required>
+          </div>     
+
           <div class="seller">
             <a href="seller_input.html">
-            <button class="button2" type="submit">I am the seller </button></a>
-            <p class="landing-text">The seller is required to take the first step to initiate the transfer.</p>
+            <button class="button1" type="submit" id="email" name="email" onclick="ValidateEmail(document.form1.email)">Seller Submit</button></a>
           </div>
+        </form>
+
+          <p class="portal-text">The buyer will not be able to complete the next form unless the Seller has completed their input.</p>
+          
+          <div class="row">
+            <label for="email" id="email">Buyer Email:</label>
+          </div>
+          <div class="input-long">
+            <input class="input-long" type="text" id="email" name="email" placeholder="janebuyer@email.com" required>
+          </div>  
           <div class="buyer">
             <a href="buyer_input.html">
-            <button class="button2" type="submit" onClick="return confirm('Please confirm the Seller has completed their input before proceeding. Click OK to continue or Cancel to return.')">I am the buyer </button></a>
-            <p class="landing-text">The buyer will not be able to complete the next form unless the Seller has completed their input.</p>
+            <button class="button1" type="submit" onClick="ValidateEmail(document.form1.email)">Buyer Submit</button></a>
           </div>
         </fieldset>
+       
+        <fieldset>
+          <legend><span> Curious About CryptoCurrencies? </span></legend>
+          <p class="portal-text">Click on one of the popular digital currencies below and learn what is behind their success or demise 🤭. 
+            Please be aware that clicking on these links will take you to an external site not monitored by the City of Gotham.</p>
+          <p id="crypto1"></p>
+        </fieldset>
       </div>    
-      <footer>
-      
+
+      <footer>    
         <p style="text-align: center;" font-size: 12px;> © 2021 #RealEstateSmartContract </p>
       </footer>
-      
+
+      <script src="js/re.js"></script> 
     </body>
 </html>

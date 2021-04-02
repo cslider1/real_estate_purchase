@@ -1,3 +1,4 @@
+// Current Date in Nav Bar
 function myFunction() {
   var d = new Date();
   var n = d.toLocaleDateString();
@@ -8,71 +9,34 @@ function myFunction() {
   document.getElementById("date").innerHTML = n;
 }
 
-
 document.addEventListener("DOMContentLoaded", function(){
   myFunction();
 })
 
+// Array of Popular Cryptocurrencies
+const crypto = [
+  "<a href='https://en.wikipedia.org/wiki/Bitcoin'>Bitcoin(BTC)</a>", 
+  "<a href='https://en.wikipedia.org/wiki/Polkadot_(cryptocurrency)'>Polkadot(DOT)</a>",
+  "<a href='https://en.bitcoinwiki.org/wiki/ChainLink#:~:text=ChainLink%20is%20a%20decentralized%20blockchain%20oracles%20service.%20The,exchange%20assets%20without%20the%20involvement%20of%20third%20parties'>Chainlink(LINK)</a>",
+  "<a href='https://en.wikipedia.org/wiki/Dogecoin'>Dogecoin(DOGE)</a>",
+  "<a href='https://en.wikipedia.org/wiki/Filecoin#:~:text=Filecoin%20%28⨎%29%20is%20an%20open-source%2C%20public%20cryptocurrency%20and,allowing%20users%20to%20rent%20unused%20hard%20drive%20space.'>Filecoin(FIL)</a>"
+];
+const cryptoString = crypto.join(" ");
+document.getElementById("crypto1").innerHTML = cryptoString;
 
 
-// document.getElementById("date").innerHTML = getTime();  // This is the global scope.
-
-// function validation() {
-//     var name = document.getElementById("token_id").value;
-//     var email = document.getElementById("email").value;
-//     var emailReg = /^([w-.]+@([w-]+.)+[w-]{2,4})?$/;
-//     if (name === '' || email === '') {
-//     alert("Please input all fields.");
-//     return false;
-//     } else if (!(email).match(emailReg)) {
-//     alert("Invalid Email.");
-//     return false;
-//     } else {
-//     return true;
-//     }
-//   }
-  
-// document.addEventListener("DOMContentLoaded", function(){
-//     let n = document.getElementById("date").innerHTML = m + "/" + d + "/"+ y;
-//     n.value = new Date();
-//     y = n.getFullYear();
-//     m = n.getMonth() + 1;
-//     d = n.getDate();
-
-//     // let now = document.getElementById("date"); 
-//     // now.dateFormat("longTime");
-    
-//     // var d = new Date();
-//     // document.getElementById("datePicker").innerHTML = d.toDateString();
-   
-// console.log(date_field, "date help")
-
-// document.addEventListener("DOMContentLoaded", function(){
-
-//     var d = new Date();
-//     document.getElementById("date").innerHTML = d;
-
-// console.log(date_field, "date help")
-
-// });  // native browser event and callback
-
-
-
-// document.addEventListener("DOMContentLoaded", function(){
-//     let date_field = document.getElementById("date");
-//     date_field.value = new Date();
-
-//     // let now = document.getElementById("date"); 
-//     // now.dateFormat("longTime");
-    
-//     // var d = new Date();
-//     // document.getElementById("datePicker").innerHTML = d.toDateString();
-   
-// console.log(date_field, "date help")
-
-
-// });  // native browser event and callback
-
-
-
-
+// Email validation
+function ValidateEmail(inputText)
+  {
+    var mailformat = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/; 
+    if(inputText.value.match(mailformat))
+    {
+        // alert("Valid email address!");
+        return true;
+    }
+    else
+    {
+        alert("Invalid email address!");
+        return false;
+    }
+  }

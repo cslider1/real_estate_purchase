@@ -9,7 +9,6 @@ html {
 
 body {
   color: black;
-  /* font-size: 1em; */
   font-family: Tahoma;
   background-color: rgb(198, 198, 206);
 }
@@ -17,7 +16,6 @@ body {
 header {
   background-color: rgb(27, 27, 122);
   color: white;
-  /* height: 25vh; */
 }
 
 img {
@@ -80,7 +78,7 @@ option {
 
 fieldset {
     color: black;
-    padding-right: 2em;
+    padding-right: .5em;
     margin-top: 2em;
 }
 
@@ -125,10 +123,9 @@ li {
 
 /* HEADER - Grid Box */
 
-.wrapper {
+.head-wrapper {
   display: grid;
   grid-template-columns: auto;
-  /* grid-auto-rows: auto; */
   background-color: rgb(27, 27, 122);
   color: white;
   height: auto;
@@ -176,9 +173,9 @@ li {
   font-weight: bolder;
 }
 
-/* Ethereum Link */
+/* ETHEREUM LINK */
 
-.wrapper2 {
+.eth-wrapper {
   display: flex;
   justify-content: center;
   background-color: rgb(198, 198, 206); 
@@ -198,29 +195,20 @@ li {
   padding-left: 2em;
 }
 
-.header-text {
-  font-family: helvetica;
-  font-size: 26px;
-}
-
-.header-label{
-  display: flex;
-  font-family: helvetica;
-  color: white;
-  font-size: 16px;
-}
-
-/* Fieldset Portal - Flexbox */
+/* PORTAL */
 
 .buyer {
-  display: flex;
+  display: block;
+  width: 40%;
   margin-bottom: 2em;
   margin-left: 2em;
   flex-direction: column;
 }
 
 .seller {
-  display: flex;
+  display: block;
+  width: 40%;
+  justify-content: center;
   margin-bottom: 2em;
   margin-left: 2em;
   flex-direction: column;
@@ -232,65 +220,84 @@ li {
   text-align: justify;
   padding-left: 2em;
   color: black;
-  margin-bottom: 2em;
-}
-.landing-text {
-  font-family: helvetica;
-  font-size: 18px;
-  text-align: justify;
-  padding-left: .5em;
-  color: black;
-  flex-wrap: wrap;
   margin-bottom: 1em;
 }
 
-.button1 {
-  width: 90px;
-  height: 30px;
-  font-family: helvetica;
-  font-size: 16px;
-  border-radius: 10px;
-  color: rebeccapurple;
-  /* color: #72060f; */
-  background-color: white;
-  margin-left: 10px;
-  cursor: pointer;
+.row {
+  float: left;
+  color: black;
+  font-size: 14px;
+  width: 25%;
+  margin-left: 0;
+  padding-top: .5em;
+  padding-left: 3em;
 }
 
-.button2 {
+.input-long {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+  color: rebeccapurple;
+  float: left;
+  width: 75%;
+  height: 40px;
+  margin-bottom: .5em;
+  margin-left: 0;
+  padding-left: 1em;
+  border-radius: 5px;
+}
+
+.button1 {
+  margin-top: 2em;
   width: 100%;
   height: 40px;
   font-family: helvetica;
   font-size: 16px;
   font-weight: 400;
   border-radius: 10px;
+  margin-bottom: 2em;
+  margin-left: 7em;
   color: rebeccapurple;
   background-color: white;
   cursor: pointer;
 }
 
+.button2 {
+  width: 90px;
+  height: 30px;
+  font-family: helvetica;
+  font-size: 16px;
+  border-radius: 10px;
+  color: rebeccapurple;
+  background-color: white;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
 .button1:hover {
   background: gainsboro;
-  color: darkblue;
   font-weight: 600;
 }
 
 .button2:hover {
   background: gainsboro;
-  color: darkblue;
   font-weight: 600;
 }
 
-.autopopulate {
+.crypto1 {
+  justify-content: space-around;
+  padding: 2em;
+}
+
+/* CONTACT PAGE */
+
+.landing-text {
   font-family: helvetica;
+  font-size: 18px;
+  text-align: justify;
+  padding-left: 1.5em;
   color: black;
-  font-size: 14px;
-  display: inline-block;
-  padding: 5px 0 2px 2px;
-  text-indent: 6px;
-  width: 100px;
-  line-height: 80%;
-  border-radius: 5px;
+  flex-wrap: wrap;
+  margin-bottom: .5em;
 }
 
 .heighttext {
@@ -299,91 +306,19 @@ li {
   font-size: 16px;
   display: inline-block;
   padding: 5px 0 2px 2px;
+  margin-left: 2em;
   text-indent: 6px;
   line-height: 100%;
   width: 100px;
   border-radius: 5px;
 }
 
-.form-control {
-  font-family: helvetica;
-  color: black;
-  font-size: 16px;
-  display: inline-block;
-  padding: 5px 0 2px 2px;
-  text-indent: 6px;
-  line-height: 100%;
-  width: 120px;
-  border-radius: 5px;
-}
-
-.heighttext2 {
-  font-family: helvetica;
-  color: black;
-  font-size: 16px;
-  display: inline-block;
-  padding: 5px 0 2px 2px;
-  text-indent: 6px;
-  width: 60px;
-  line-height: 100%;
-  border-radius: 5px;
-}
-
 .input-medium {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 14px;
-  /* flex: 0 0 20px; */
-  /* margin-left: 10px; */
-  width: 150px;
+  font-size: 12px;
+  width: 250px;
   height: 30px;
   border-radius: 5px;
-}
-
-.input-long {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 14px;
-  flex: 0 0 20px;
-  /* margin-left: 10px; */
-  width: 400px;
-  height: 30px;
-  border-radius: 5px;
-}
-
-.input-short {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 14px;
-  flex: 0 0 20px;
-  /* margin-left: 10px; */
-  padding: 5px;
-  width: 75px;
-  height: 30px;
-  border-radius: 5px;
-}
-
-.checkbox {
-  /* line-height: 120%; */
-  width: 20px; 
-  height: 20px;
-}
-
-.select {
-  font-family: helvetica;
-  font-size: 16px;
-  padding: 5px 0 5px 2px;
-  line-height: 120%;
-  border-radius: 5px;
-  margin-left: 10px;
-  /* width: 75px; */
-}
-
-.option {
-  font-family: helvetica;
-  font-size: 16px;
-  padding: 5px 0 2px 2px;
-  line-height: 120%;
-  border-radius: 5px;
-  margin-left: 10px;
-  /* width: 75px; */
 }
 
 
@@ -433,7 +368,7 @@ li {
     text-align: center;
   }
 
-  .wrapper {
+  .head-wrapper {
     display: grid;
     grid-template-columns: 200px 2fr 1fr;
     grid-auto-rows: 80px;
@@ -484,7 +419,7 @@ li {
     color: white;
   }
 
-  .wrapper2 {
+  .eth-wrapper {
     height: 4em;
     margin-top: .5em;
     margin-bottom: 1em;
@@ -495,8 +430,32 @@ li {
   }
 
   .button2 {
-    width: 350px;
+    width: 250px;
     height: 40px;
+  }
+
+  .row {
+    font-size: 18px;
+  }
+
+  .stop {
+    display: inline;
+    width: 4em;
+  }
+
+  .header-text {
+    display: inline;
+    padding-top: 0;
+  }
+
+  .light {
+    display: inline-block;
+    margin-top: 3em;
+  }
+
+  .input-medium {
+    font-size: 14px;
+    width: 400px;
   }
 
 
@@ -524,11 +483,15 @@ li {
       height: 3.5em;
     }
 
-    /* img {
-      width: 70%;
-    } */
+    img {
+      width: 120%;
+    }
 
-    .wrapper {
+    fieldset {
+      padding-right: 2em;
+    }
+
+    .head-wrapper {
       display: grid;
       grid-template-columns: 200px 2fr 1fr;
       grid-auto-rows: 80px;
@@ -551,14 +514,6 @@ li {
       grid-row-start: 1;
       grid-row-end: 2;
       margin-left: 6em;
-    }
-    
-    .box3 {
-      grid-column-start: 2;
-      grid-column-end: 5;
-      grid-row-start: 2;
-      grid-row-end: 3;
-      padding-left: 3em;
     }
 
     .menu {
@@ -583,7 +538,7 @@ li {
       background: none;
     }
 
-    .wrapper2 {
+    .eth-wrapper {
       display: flex;
       justify-content: center;
       background-color: rgb(198, 198, 206); 
@@ -603,27 +558,24 @@ li {
     
     .image-box {
       display: block;
+      width: 120px;
       padding: 1em 3.5em 0 0;
     }
     .portal-text {
-      margin-bottom: 4em;
+      margin-bottom: 2em;
     }
     .landing-text {
       margin-bottom: 2em;
       display: inline-block;
     }
-
-    .buyer {
-      display: block;
-      flex-wrap: wrap;
-    }
     
-    .seller {
-      display: block;
-    }
-
-    .button2 {
-      width: 250px;
+    .input-long {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 14px;
+      float: left;
+      width: 75%;
       height: 40px;
-      margin-left: 10px;
+      margin-bottom: 1em;
+      padding-left: 1em;
+      border-radius: 5px;
     }
