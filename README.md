@@ -28,4 +28,4 @@ While all sub-pages have limited functionality, the Home page (*index.html*) is 
 4. Continue to tighten up code in HTML, CSS, and JavaScript files.
 5. Develop UI for real estate agents to use and market to them. These smart contracts will not replace their jobs. 
 
-The market will evolve for these types of transactions. Focus on developing content and friendly UIs that will make an easy transition for people, businesses, and governments to use.
+The real estate market will evolve for these types of transactions. Focus on developing content and friendly UIs that will make an easy transition for people, businesses, and governments to use.
