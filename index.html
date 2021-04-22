@@ -1,104 +1,84 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Real Estate Purchase Contract</title>
-      <link rel="stylesheet" href="css/normalize.css">
-      <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
-      <link rel="stylesheet" href="css/re_style.css">
-         
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Purchase Contract</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/re_style.css">        
   </head>
   
-    <body>
-      <header>
-        <div class="head-wrapper">
-          <div class="box1">
-            <img class="image-float" src="img/gotham.png" alt="logo">
-          </div>
-          <div class="box2">
-            <h2>City of Gotham</h2>
-            <h3>Real Estate Token Transfer Portal</h3>
-          </div>
+  <body>
+    <header>
+      <div class="head-wrapper">
+        <div class="box1">
+          <img class="image-float" src="img/gotham.png" alt="logo">
         </div>
-      </header>
- 
-      <nav>
-        <ul class="menu">
-          <li class="today"><label>Today's Date: &nbsp;<label id="date"></label></label></li>
-          <li class="item"><a href="index.html">Home</a></li>
-          <li class="item"><a href="about_page.html">About</a></li>
-          <li class="item"><a href="seller_input.html">Seller</a></li>
-          <li class="item"><a href="buyer_input.html">Buyer</a></li>
-          <li class="item"><a href="contact_page.html">Contact</a></li>  
-        </ul>
-      </nav>
-
-      
-    
-
-      <div class="eth-wrapper">
-        <div class="text-box">
-          <p class="text-box">What are smart contracts? &nbsp;&nbsp;⇨</p>
-        </div>
-        <div class="image-box">
-          <a href="https://ethereum.org/en/developers/docs/smart-contracts/#:~:text=A%20%22smart%20contract%22%20is%20simply%20a%20program%20that,and%20they%20can%20send%20transactions%20over%20the%20network." onClick="return confirm('Linking to an external site. Click OK to continue.')">
-            <img class="image-float2" src="img/token.png" alt="token">
-          </a>
+        <div class="box2">
+          <h2>City of Gotham</h2>
+          <h3>Real Estate Token Transfer Portal</h3>
         </div>
       </div>
+    </header>
 
-      <div>
-        <fieldset>
-          <legend><span> Real Estate Transfer Portal </span></legend>
-          <p class="portal-text">Welcome to the City of Gotham's portal for transacting your smart contract real estate transfer. 
-          Click the appropriate link below to take the next steps in the process:</p>
-          
-         
-          
-          <p class="portal-text">The seller is required to take the first step to initiate the transfer.</p>
+    <nav>
+      <ul class="menu">
+        <li class="today"><label>Today's Date: &nbsp;<label id="date"></label></label></li>
+        <li class="item"><a href="index.html">Home</a></li>
+        <li class="item"><a href="about_page.html">About</a></li>
+        <li class="item"><a href="seller_input.html">Seller</a></li>
+        <li class="item"><a href="buyer_input.html">Buyer</a></li>
+        <li class="item"><a href="contact_page.html">Contact</a></li>  
+      </ul>
+    </nav>
+
+    <div class="eth-wrapper">
+      <div class="text-box">
+        <p class="text-box">What are smart contracts? &nbsp;&nbsp;⇨</p>
+      </div>
+      <div class="image-box">
+        <a href="https://ethereum.org/en/developers/docs/smart-contracts/#:~:text=A%20%22smart%20contract%22%20is%20simply%20a%20program%20that,and%20they%20can%20send%20transactions%20over%20the%20network." onClick="return confirm('Linking to an external site. Click OK to continue.')">
+          <img class="image-float2" src="img/token.png" alt="token">
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <fieldset>
+        <legend><span> Real Estate Transfer Portal </span></legend>
+        <p class="portal-text">Welcome to the City of Gotham's portal for transacting your smart contract real estate transfer. 
+        Click the appropriate link below to take the next steps in the process:</p>
         
-          
-          <!-- <div class="row">
-            <label>Seller Email:</label>
-          </div>
-          <form name="form1" action="#">
-          <div class="input-long">
-            <input class="input-long" type="text" placeholder="joeseller@email.com">
-          </div>      -->
-          <div class="seller">
-            <a href="seller_input.html">
-            <button class="button1" type="submit">Seller Proceed</button></a>
-          </div>
-          <!-- onclick="ValidateEmail(document.form1.text1)" -->
+        <p class="portal-text">The seller is required to take the first step to initiate the transfer.</p>
+      
+        <div class="seller">
+          <a href="seller_input.html">
+          <button class="button1" type="submit">Seller Proceed</button></a>
+        </div>
+        <!-- onclick="ValidateEmail(document.form1.text1)" -->
 
-          <p class="portal-text">The buyer will not be able to complete the next form unless the Seller has completed their input first.</p>
-          
-          <!-- <div class="row">
-            <label>Buyer Email:</label>
-          </div>
-          <div class="input-long">
-            <input class="input-long" type="text" placeholder="janebuyer@email.com">
-          </div>   -->
-          <div class="buyer">
-            <a href="buyer_input.html">
-            <button class="button1" type="submit">Buyer Proceed</button></a>
-          </div>
-          </form>
-        </fieldset>
-       
-        <fieldset>
-          <legend><span> Curious About CryptoCurrencies? </span></legend>
-          <p class="portal-text">Click on one of the popular digital currencies below and learn what is behind their success or demise 🤭. 
-            Please be aware that clicking on these links will take you to an external site not monitored by the City of Gotham.</p>
-          <p class="crypto1" id="crypto1"></p>
-        </fieldset>
-      </div>    
+        <p class="portal-text">The buyer will not be able to complete the next form unless the Seller has completed their input first.</p>
+      
+        <div class="buyer">
+          <a href="buyer_input.html">
+          <button class="button1" type="submit">Buyer Proceed</button></a>
+        </div>
+        </form>
+      </fieldset>
+      
+      <fieldset>
+        <legend><span> Curious About CryptoCurrencies? </span></legend>
+        <p class="portal-text">Click on one of the popular digital currencies below and learn what is behind their success or demise 🤭. 
+          Please be aware that clicking on these links will take you to an external site not monitored by the City of Gotham.</p>
+        <p class="crypto1" id="crypto1"></p>
+      </fieldset>
+    </div>    
 
-      <footer>    
-        <p style="text-align: center;" font-size: 12px;> © 2021 #RealEstateSmartContract </p>
-      </footer>
+    <footer>    
+      <p style="text-align: center;" font-size: 12px;> © 2021 #RealEstateSmartContract </p>
+    </footer>
 
-      <script src="js/re.js"></script> 
-    </body>
+    <script src="js/re.js"></script> 
+  </body>
 </html>
