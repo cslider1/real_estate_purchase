@@ -22,5 +22,5 @@ const crypto = [
   "<a href='https://en.wikipedia.org/wiki/Filecoin#:~:text=Filecoin%20%28⨎%29%20is%20an%20open-source%2C%20public%20cryptocurrency%20and,allowing%20users%20to%20rent%20unused%20hard%20drive%20space.'>Filecoin(FIL)</a>"
 ];
 const cryptoString = crypto.join(" ");
-document.getElementById("crypto1").innerHTML = cryptoString;
-
+// document.getElementById("crypto1").innerHTML = cryptoString;
+document.getElementById("crypto1").innerHTML = crypto.join("     ");
